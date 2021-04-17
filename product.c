@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "product.h"
 
 int addProduct(Product *p){
@@ -38,4 +39,27 @@ int deleteProduct(Product *p){
 	return 1;
 }
 
+
+int loadProduct(Product *p[]){
+	FILE *fp;
+	int i;
+	fp = fopen("product.txt","rt");
+	if(fp==NULL)
+		printf("=>파일 없음\n");
+	else{
+		for(i=0;i<20;i++){
+			p[i]=(Product *)malloc(sizeof(Product));
+			fscanf(fp,"%[^\n]s",p[i]->pname);
+			if(feof(fp))break;
+			fscanf(fp,"%f",&(p[i]->weight));
+			fscanf(fp,"%d",&(p[i]->price));
+			fscanf(fp,"%d",&(p[i]->srate));
+			fscanf(fp,"%d",&(p[i]->nsrate));
+			fgetc(fp);
+		}
+		printf("=>로딩성공\n");
+	}
+	fclose(fp);
+	return i;
+}
 

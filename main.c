@@ -10,6 +10,7 @@ int main(){
 	Product *fruit[SIZE];
 	int menu;
 	int index = 0,count = 0;
+	index=count=loadProduct(fruit);
 	while(1){
 	menu = selectMenu();
         if(menu==0) break;

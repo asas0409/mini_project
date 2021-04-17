@@ -47,6 +47,8 @@ int main(){
 		nameSearch(fruit,index);
 	}else if(menu==7){
 		srateSearch(fruit,index);
+	}else if(menu==8){
+		priceSearch(fruit,index);
 	}
 	}
     printf("종료됨!\n");

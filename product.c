@@ -113,3 +113,19 @@ void srateSearch(Product *p[],int count){
 		printf("=>없는 상품입니다.\n");
 
 }
+void priceSearch(Product *p[],int count){
+	int sprice;
+	int comp=0;
+	printf("검색할 가격을 입력하세요.( 입력한 가격 이하의 상품 표시) : ");
+	scanf("%d",&sprice);
+	for(int i=0;i<count;i++){
+		if(p[i]->price==-1)continue;
+		if(p[i]->price<=sprice){
+			readProduct(*p[i]);
+			comp++;
+		}
+	}
+	if(comp==0)
+		printf("=>입력한 가격 이하의 상품이 없습니다.\n");
+
+}

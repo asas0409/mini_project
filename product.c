@@ -82,12 +82,29 @@ void saveProduct(Product *p[],int count){
 }
 void nameSearch(Product *p[],int count){
 	char sn[30];
-	int comp;
+	int comp=0;
 	printf("검색할 상품명 입력 : ");
 	scanf("%[^\n]s",sn);
 	for(int i=0;i<count;i++){
 		if(p[i]->price==-1)continue;
 		if(strstr(p[i]->pname,sn)){
+			readProduct(*p[i]);
+			comp++;
+		}
+	}
+	if(comp==0)
+		printf("=>없는 상품입니다.\n");
+
+}
+
+void srateSearch(Product *p[],int count){
+	int star;
+	int comp=0;
+	printf("검색할 별점 입력 : ");
+	scanf("%d",&star);
+	for(int i=0;i<count;i++){
+		if(p[i]->price==-1)continue;
+		if(p[i]->srate==star){
 			readProduct(*p[i]);
 			comp++;
 		}

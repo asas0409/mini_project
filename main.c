@@ -45,6 +45,8 @@ int main(){
 		saveProduct(fruit,index);
 	}else if(menu==6){
 		nameSearch(fruit,index);
+	}else if(menu==7){
+		srateSearch(fruit,index);
 	}
 	}
     printf("종료됨!\n");

@@ -41,6 +41,8 @@ int main(){
                		 count--;
        		    }
             }
+	}else if(menu==5){
+		saveProduct(fruit,index);
 	}
 	}
     printf("종료됨!\n");

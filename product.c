@@ -63,3 +63,19 @@ int loadProduct(Product *p[]){
 	return i;
 }
 
+void saveProduct(Product *p[],int count){
+	FILE *fp;
+	int i;
+	fp = fopen("product.txt","wt");
+	for(i=0;i<count;i++){
+		if(p[i]->price==-1) continue;
+		fprintf(fp,"%s\n",p[i]->pname);
+		fprintf(fp,"%f\n",p[i]->weight);
+		fprintf(fp,"%d\n",p[i]->price);
+		fprintf(fp,"%d\n",p[i]->srate);
+		fprintf(fp,"%d\n",p[i]->nsrate);
+	}
+	fclose(fp);
+	printf("=>저장 성공\n");
+
+}

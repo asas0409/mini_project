@@ -13,6 +13,7 @@ int selectMenu(){
 	printf("5.저장\n");
 	printf("6.이름으로 검색\n");
 	printf("7.별점으로 검색\n");
+	printf("8.가격으로 검색\n");
 	printf("0.종료\n");
 	printf("=>원하는 메뉴는? ");
 	scanf("%d",&menu);

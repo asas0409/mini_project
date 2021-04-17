@@ -43,6 +43,8 @@ int main(){
             }
 	}else if(menu==5){
 		saveProduct(fruit,index);
+	}else if(menu==6){
+		nameSearch(fruit,index);
 	}
 	}
     printf("종료됨!\n");

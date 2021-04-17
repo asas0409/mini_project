@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "product.h"
 
 int addProduct(Product *p){
@@ -77,5 +78,21 @@ void saveProduct(Product *p[],int count){
 	}
 	fclose(fp);
 	printf("=>저장 성공\n");
+
+}
+void nameSearch(Product *p[],int count){
+	char sn[30];
+	int comp;
+	printf("검색할 상품명 입력 : ");
+	scanf("%[^\n]s",sn);
+	for(int i=0;i<count;i++){
+		if(p[i]->price==-1)continue;
+		if(strstr(p[i]->pname,sn)){
+			readProduct(*p[i]);
+			comp++;
+		}
+	}
+	if(comp==0)
+		printf("=>없는 상품입니다.\n");
 
 }

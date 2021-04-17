@@ -15,6 +15,6 @@ int updateProduct(Product *p); // 등록된 제품 중 선택한 제품 하나�
 int deleteProduct(Product *p); // 등록된 제품 중 선택한 제품 하나를 삭제하는 함수
 int loadProduct(Product *p[]);  // 파일에 저장된 제품 정보를 불러오는 함수 
 void saveProduct(Product *p[],int count);  // 제품 정보를 파일에 저장하는 함수
-void nameSearch(Product *p,int count);   // 제품 이름으로 검색하여 제품을 찾는 함수
+void nameSearch(Product *p[],int count);   // 제품 이름으로 검색하여 제품을 찾는 함수
 void srateSearch(Product *p,int count);  // 별점으로 검색하여 제품을 찾는 함수
 void priceSearch(Product *p,int count);  // 가격으로 검색하여 제품을 찾는 함수

@@ -88,6 +88,7 @@ void nameSearch(Product *p[],int count){
 	for(int i=0;i<count;i++){
 		if(p[i]->price==-1)continue;
 		if(strstr(p[i]->pname,sn)){
+			printf("\n");
 			readProduct(*p[i]);
 			comp++;
 		}
@@ -105,6 +106,7 @@ void srateSearch(Product *p[],int count){
 	for(int i=0;i<count;i++){
 		if(p[i]->price==-1)continue;
 		if(p[i]->srate==star){
+			printf("\n");
 			readProduct(*p[i]);
 			comp++;
 		}
@@ -121,6 +123,7 @@ void priceSearch(Product *p[],int count){
 	for(int i=0;i<count;i++){
 		if(p[i]->price==-1)continue;
 		if(p[i]->price<=sprice){
+			printf("\n");
 			readProduct(*p[i]);
 			comp++;
 		}
